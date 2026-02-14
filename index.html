@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=`">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Events</h1>
+    <button onclick="makeYellow()">Yellow</button>
+    <button onclick="makePurple()">Purple</button>
+    <br>
+    <br>
+    <button id="btn-make-green">Green</button>
+    <button id="btn-make-red">Red</button>
+<script>
+        const btnMakeGreen = document.getElementById('btn-make-green');
+        btnMakeGreen.onclick = function makeGreen(){
+            document.body.style.backgroundColor = 'lightgreen';
+        }
+        //Event Listener
+        //document.getElementById().addEventListener('event type', handler)
+        document.getElementById('btn-make-red').addEventListener('click', function makeRed(){
+            document.body.style.backgroundColor = 'red'
+        })
+
+        // mouseover event
+        const box = document.getElementById('btn-make-red')
+        box.addEventListener('mouseover', function(){
+            box.style.backgroundColor = 'orange';
+        })
+
+        // mouseout event
+        const out = document.getElementById('btn-make-red')
+        out.addEventListener('mouseout', function(){
+            box.style.backgroundColor = 'white';
+        })
+    </script>
+    <script src="./javascript/event.js"></script>
+</body>
+</html>
